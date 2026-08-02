@@ -28,7 +28,7 @@ book_id	title	author	published_year	rating
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-02T09:26:26.921Z  
+**Submitted:** 2026-08-02T09:50:17.201Z  
 
 ```sql
 -- your code goes here
