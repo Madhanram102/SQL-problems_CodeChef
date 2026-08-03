@@ -47,8 +47,8 @@ Output: [8,9,9,9,0,0,0,1]
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 46.1 MB (beats 97.55%)  
-**Submitted:** 2026-08-02T12:42:09.557Z  
+**Memory:** 46.3 MB (beats 90.87%)  
+**Submitted:** 2026-08-02T13:03:41.979Z  
 
 ```java
 class ListNode {
