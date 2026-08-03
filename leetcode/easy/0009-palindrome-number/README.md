@@ -50,7 +50,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 **Language:** Java  
 **Runtime:** 5 ms (beats 80.89%)  
 **Memory:** 46 MB (beats 34.07%)  
-**Submitted:** 2026-08-02T12:42:52.124Z  
+**Submitted:** 2026-08-02T12:43:07.347Z  
 
 ```java
 class Solution {
