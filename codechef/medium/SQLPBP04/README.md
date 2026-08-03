@@ -44,7 +44,7 @@ match_id	player1	player2	winner	match_date
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-03T04:53:24.179Z  
+**Submitted:** 2026-08-03T05:03:49.795Z  
 
 ```sql
 select DISTINCT p.player_name , p.score from Players p join Matches m 
