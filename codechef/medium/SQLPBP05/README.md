@@ -4,38 +4,32 @@
 
 ## Problem
 
-### Player Performance Insights
+### Player Details
 ### Task
 
-Write a query to find the names of the  **top 3 distinct players**  by highest score who have  **won**  matches, including their  **scores**.
+Write a query to retrieve the details of the  **last five matches**  played, including the match ID, the names of the players who participated, the name of the winning player, match date, and the final score of the winner.
 
-Table 1:  **Players** 
+There are two tables named  **`Players`**  and  **`Matches`**.
 
-player_id	player_name	score	rank
-1	Alice	1200	5
-2	Bob	1500	2
-3	Charlie	1300	4
-4	David	1600	1
-5	Eve	1100	6
-
-Table 2:  **Matches** 
-
-match_id	player1	player2	winner	match_date
-101	Alice	Bob	Bob	2024-01-15
-102	Charlie	David	David	2024-01-16
-103	Eve	Bob	Bob	2024-01-17
-104	Alice	David	David	2024-01-18
-105	Charlie	Eve	Charlie	2024-01-19
 ### Expected Output Columns:
+- match_id
+- player_1
+- player_2
+- winner
+- match_date
+- score
+### Expected Output:
 
 ```
-┌─────────────┬───────┐
-│ player_name │ score │
-├─────────────┼───────┤
-│ David       │ 1600  │
-│ Bob         │ 1500  │
-│ Charlie     │ 1300  │
-└─────────────┴───────┘
+┌──────────┬──────────┬──────────┬────────┬────────────┬───────┐
+│ match_id │ player_1 │ player_2 │ winner │ match_date │ score │
+├──────────┼──────────┼──────────┼────────┼────────────┼───────┤
+│ 106      │ Frank    │ Hank     │ Frank  │ 2024-01-29 │ 1450  │
+│ 101      │ Alice    │ Bob      │ Bob    │ 2024-01-25 │ 1500  │
+│ 110      │ David    │ Eve      │ David  │ 2024-01-24 │ 1600  │
+│ 108      │ Jack     │ Alice    │ Jack   │ 2024-01-19 │ 1400  │
+│ 103      │ Eve      │ Bob      │ Bob    │ 2024-01-17 │ 1500  │
+└──────────┴──────────┴──────────┴────────┴────────────┴───────┘
 
 ```
 
@@ -44,11 +38,12 @@ match_id	player1	player2	winner	match_date
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-03T04:53:27.536Z  
+**Submitted:** 2026-08-03T05:00:12.505Z  
 
 ```sql
-select DISTINCT p.player_name , p.score from Players p join Matches m 
-ON p.player_name= m.winner Order by score desc limit 3; 
+select m.match_id,m.player_1,m.player_2,m.winner,m.match_date,p.score from 
+Players p join Matches m 
+ON p.player_name=m.winner order by match_date desc limit 5;
 ```
 
 ---
