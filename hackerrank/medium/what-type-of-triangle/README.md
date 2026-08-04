@@ -30,17 +30,18 @@ Each row in the table denotes the lengths of each of a triangle's three sides.
 **Language:** db2  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-04T17:16:18.915Z  
+**Submitted:** 2026-08-04T17:43:08.236Z  
 
 ```db2
 SELECT 
-    CASE 
-        WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
-        WHEN A = B AND B = C THEN 'Equilateral'
-        WHEN A = B OR B = C OR A = C THEN 'Isosceles'
-        ELSE 'Scalene'
-    END
-FROM TRIANGLES;
+ CASE 
+ WHEN A+B<=C OR A+C<=B OR B+C<=A THEN 'Not A Triangle'
+ WHEN A=B AND B=C THEN ' Equilateral'
+ WHEN A=B OR B=C OR A=C THEN ' Isosceles'
+  ELSE 'Scalene'
+  
+  END 
+  FROM TRIANGLES;
 
 ```
 
