@@ -68,8 +68,8 @@ Thus, the string formed by concatenating the mapped characters is `"g"`.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 93.36%)  
-**Memory:** 46.7 MB (beats 30.90%)  
-**Submitted:** 2026-08-09T10:53:44.388Z  
+**Memory:** 46 MB (beats 98.85%)  
+**Submitted:** 2026-08-09T10:54:00.686Z  
 
 ```java
 class Solution {
